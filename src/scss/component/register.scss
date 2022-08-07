@@ -1,0 +1,13 @@
+.reg{
+    height: calc(100vh - 11rem);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+}

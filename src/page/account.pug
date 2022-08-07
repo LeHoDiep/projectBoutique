@@ -1,0 +1,48 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title PiedTeam
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  body
+    include ./layout/header.pug
+    .profile 
+      .container
+        .profile__block
+          include ./layout/profile__side-bar.pug
+          .profile__side-content
+            .account
+                h1.account__title Hồ Sơ Của Tôi
+                p.account__detail Quản lý thông tin hồ sơ để bảo mật tài khoản
+                hr
+                form.account__form#account__form
+                  div.field__form
+                    div.label__form 
+                      label(for="") Tên Đăng Nhập
+                    div.input__form 
+                      p#account-username username
+                  div.field__form
+                    div.label__form 
+                      label(for="") số điện thoại
+                    div.input__form 
+                      input#account-phone(type="text")
+                  h1 đổi password
+                  div.field__form
+                    div.label__form 
+                      label(for="") current password
+                    div.input__form 
+                      input#account-current-pwd(type="password")
+
+                  div.field__form
+                    div.label__form 
+                      label(for="") new password
+                    div.input__form 
+                      input#account-new-pwd(type="password")
+                  input#account-submit(type="submit", value="Lưu")
+
+    noscript  PiedTeam 
+    script(src='../bundle.js')
+    script(type="module" src='../js/account.js')
+

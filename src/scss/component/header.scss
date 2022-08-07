@@ -1,0 +1,144 @@
+.header {
+    background-color: #f4ebe9;
+    color: #3D4A3D;
+
+    .header__top {
+        // border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        height: 6rem;
+
+        .namebrand__header {
+            width: 20rem;
+
+            // border: 1px solid red;
+            .namebrand-title__header {
+                font-family: 'Lemonada', cursive;
+                font-size: 3rem;
+            }
+        }
+
+        .logobrand__header {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            // border: 1px solid brown;
+            background-color: #f4ebe9;
+            border-radius: 50%;
+            width: 17rem;
+            height: 17rem;
+
+            .logobrand__block {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                // border: 1px solid yellow;
+                width: 15rem;
+                height: 15rem;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+        }
+
+        .socialMedia__header {
+            width: 20rem;
+            // border: 1px solid blue;
+            display: flex;
+            justify-content: flex-end;
+
+            .socialMedia__block {
+                // border: 1px solid red;
+                width: 4rem;
+                height: 4rem;
+                margin-left: 2rem;
+                position: relative;
+
+                a {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    i {
+                        font-size: 3rem;
+                        color: #3D4A3D;
+                    }
+
+                    &:hover {
+                        i {
+
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header__bottom {
+        border-top: 1px solid white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5rem;
+
+        .nav__block {
+            .nav-menu__list {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                list-style-type: none;
+                font-weight: 700;
+
+                .nav-menu__item {
+                    margin-right: 2rem;
+
+                    .nav-menu__link {
+                        color: #3D4A3D;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .account__block {
+            .account-menu__list {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                list-style-type: none;
+                font-weight: 700;
+
+                .account-menu__item {
+                    margin-left: 2rem;
+
+                    .account-menu__link {
+                        color: #000000BF;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

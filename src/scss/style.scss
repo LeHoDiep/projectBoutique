@@ -1,0 +1,33 @@
+@import 'component/component1.scss';
+@import 'component/component2.scss';
+@import 'component/register.scss';
+@import 'component/login.scss';
+@import 'component/form.scss';
+@import 'component/header.scss';
+@import 'component/welcome-page.scss';
+@import 'component/profile.scss';
+@import 'component/profile__side-bar.scss';
+@import 'component/account.scss';
+@import 'component/banner-slider.scss';
+@import 'component/product-slider.scss';
+
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding:0rem 0.5rem;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: Helvetica, sans-serif;
+    // font-family: 'Roboto', sans-serif;
+}
+body{
+    font-size: 1.6rem;
+}

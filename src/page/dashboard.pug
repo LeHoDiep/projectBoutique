@@ -1,0 +1,65 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title PiedTeam
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  body
+    include ./layout/header.pug
+    .profile 
+      .container
+        .profile__block
+          include ./layout/profile__side-bar.pug
+          .profile__side-content
+            .dash-board
+                h1 trang tổng hợp thông tin
+                .form__block
+                  form#add-product__form1(action="/api/file" method="POST" enctype="multipart/form-data")
+                    div.field__form
+                      div.label__form
+                        label(for="file") product image
+                      div.input__form 
+                        input#product-image__add-product1(type="file" name="file")
+
+                    input(type="submit" value="thêm product")
+                  form#add-product__form(method="POST" enctype="multipart/form-data")
+                    div.field__form
+
+                      div.label__form
+                        label(for="product-name__add-product") productname
+                      div.input__form 
+                        input#product-name__add-product(type="text" name="product-name")
+
+                    div.field__form
+                      div.label__form
+                        label(for="product-price__add-product") price
+                      div.input__form 
+                        input#product-price__add-product(type="number" name="product-price")
+
+                    div.field__form
+                      div.label__form
+                        label(for="product-desc__add-product") product description
+                      div.input__form 
+                        input#product-desc__add-product(type="text" name="product-desc")
+                    
+                    div.field__form
+                      div.label__form
+                        label(for="product-type__add-product") type
+                      div.input__form 
+                        input#product-type__add-product(type="text" name="product-type")
+
+                    div.field__form
+                      div.label__form
+                        label(for="product-image__add-product") product image
+                      div.input__form 
+                        input#product-image__add-product(type="file" name="product-image" multiple)
+
+                    input(type="submit" value="thêm product")
+                div.render-datademo
+
+                    
+    noscript  PiedTeam 
+    script(src='../bundle.js')
+    script(type="module" src='../js/addnewProduct.js')

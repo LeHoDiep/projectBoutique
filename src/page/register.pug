@@ -1,0 +1,23 @@
+doctype html
+html(lang="vi")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title register
+    body 
+        include ./layout/header.pug
+        div.reg(style="background-image: url('../img/bg-login.jpg')")
+            .container
+                div.reg__block.form__block
+                    h1.reg__title.form__title Registration
+                    form#reg-form.content-form
+                        input.text-input#username-reg__form(type="text" placeholder="username")
+                        input.text-input#password-reg__form(type="password" placeholder="password")
+                        input.text-input#re-password-reg__form(type="password" placeholder="re-password")
+                        input.text-input#phone-reg__form(type="tel" placeholder="phone number")
+                        input.submit-input#submit-reg__form(type="submit" value="Create new account")
+        script(src='../bundle.js')
+        script(type='module' src='../js/register.js')
+        
+

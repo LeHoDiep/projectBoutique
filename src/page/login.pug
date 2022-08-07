@@ -1,0 +1,20 @@
+doctype html
+html(lang="vi")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title login
+    body 
+        include ./layout/header.pug
+        div.login(style="background-image: url('../img/bg-login2.png')")
+            .container
+                div.login__block.form__block
+                    h1.login__title.form__title login
+                    form#login-form.content-form
+                        input.text-input#username-login__form(type="text" placeholder="userName")
+                        input.text-input#password-login__form(type="password" placeholder="password")
+                        input.submit-input#submit-login__form(type="submit" value="Submit")
+        script(src='../bundle.js')
+        script(type="module" src='../js/login.js')
+        

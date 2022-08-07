@@ -1,0 +1,1 @@
+class Http{constructor(){this.api="http://localhost:4000",this.headers={"Content-Type":"application/json"}}async send(t,e,s){return await fetch(e,{method:t,headers:this.headers,body:s?JSON.stringify(s):void 0}).then(e=>e.json().then(t=>{if(e.ok)return t;throw t.message}))}async getDatas(t){return this.send("GET",this.api+"/"+t,null)}}export default new Http;

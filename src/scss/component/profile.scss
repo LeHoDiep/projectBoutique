@@ -1,0 +1,24 @@
+.profile{
+    .container{
+        .profile__block{
+            height: calc(100vh - 11rem);
+            // border: 1px solid gray;
+            display: flex;
+            justify-content: space-between;
+            // profile__side-bar
+            .profile__side-content{
+                height: 100%;
+                padding-top: 11rem;
+                width: calc(100% - 14rem);
+                background-color: #7D917D;
+                .side-content__tag{
+                    display: none;
+                    &.actived{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    
+}
