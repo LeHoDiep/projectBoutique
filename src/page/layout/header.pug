@@ -2,46 +2,70 @@ doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
     title PiedTeam
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   body
     div.header
       div.container
-        div.header__top
-          div.namebrand__header
-            p.namebrand-title__header Thằng Mèo
-          div.logobrand__header
-            div.logobrand__block
-              a(href="../page/index.html") 
-                img(src="../img/logoThangMeoBgP.png") 
-          div.socialMedia__header
-            div.socialMedia__block
-              a(href="https://www.facebook.com/taymeokhongkheo") <i class="bi bi-facebook socialMedia__icon fb__icon"></i> 
-            div.socialMedia__block
-              a(href="https://www.instagram.com/thangmeo__/") <i class="bi bi-instagram socialMedia__icon ins__icon"></i> 
-        div.header__bottom 
-          div.nav__block
-            ul.nav-menu__list
-              li.nav-menu__item
-                a(href="../page/index.html").nav-menu__link HOME
-              li.nav-menu__item
-                a(href="#").nav-menu__link ABOUT
-              li.nav-menu__item
-                a(href="#").nav-menu__link SHOP
-              li.nav-menu__item
-                a(href="#").nav-menu__link CONTACT
-          div.account__block
-            ul.account-menu__list
-              li.account-menu__item
-                a(href="../page/login.html").account-menu__link Log in
-              li.account-menu__item
-                a(href="../page/register.html").account-menu__link Register
-          div.infor-account__block
-            div.infor-account__controll
-              p.userName
-               a(href="../page/account.html")
-              p.signout-btn 
-               a(href="../page/index.html") sign out
+        div.header__content
+          div.header__left
+            a.brandlogo-header(href="../page/index.html") 
+              div.brandlogo-image__block
+                img(src="../img/logoThangMeoBgP.png")
+              div.brandlogo-name
+                p.brandlogo-name__title Thằng Mèo 
+          div.header__right
+            div.nav__block
+              ul.nav-menu__list
+                li.nav-menu__item
+                  a.nav-menu__link.actived(href="../page/index.html") Home
+                li.nav-menu__item
+                  a.nav-menu__link(href="#") Shop
+                li.nav-menu__item
+                  a.nav-menu__link(href="#") About
+                li.nav-menu__item
+                  a.nav-menu__link(href="#") Contact
+                li.nav-menu__item
+                  a.nav-menu__link(href="#") 
+                    div.nav-menu__cart
+                      img(src="/api/get_image/3c858d78d644ed9a93a808a41fe84ab7.png" alt="")
+            div.account
+              input(type="checkbox").account__check
+              div.account-basic
+                div.account-basic__avt
+                  img(src="../img/avatar.png" alt="")
+                p.userName
+                  a(href="../account.html")
+                div.account-basic__icon
+                  div.triangle__icon
+              div.account-popup
+                div.account__block
+                  ul.account-menu__list
+                    li.account-menu__item
+                      a.account-menu__link(href="../page/login.html")
+                        img(src="/api/get_image/da1f874ed9e1d12dcae3862b1486084e.png", alt="")
+                        p.account-menu__title Sign in  
+                    li.account-menu__item
+                      a.account-menu__link(href="../page/register.html")
+                        img(src="/api/get_image/5e901307edbc7ab85774158c9e8fab5f.png", alt="")
+                        p.account-menu__title Sign up
+                div.infor-account__block
+                  ul.account-menu__list
+                    li.account-menu__item
+                      a.account-menu__link(href="../page/account.html") 
+                        img(src="/api/get_image/f632440966a8240fd477ea6cd31bd36b.png", alt="")
+                        p.account-menu__title Information
+                    li.account-menu__item
+                      a.account-menu__link(href="#") 
+                        img(src="/api/get_image/1394b71db50149769c2648ebda7117ad.png", alt="")
+                        p.account-menu__title Payment method
+                    li.account-menu__item
+                      a.account-menu__link.signout-btn(href="") 
+                        img(src="/api/get_image/709cbd2b5854cbbbc458623505513b0a.png", alt="")
+                        p.account-menu__title Sign out
     script(type="module" src='../js/header.js')
