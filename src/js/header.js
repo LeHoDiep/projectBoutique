@@ -24,7 +24,14 @@ document.querySelector('.signout-btn').addEventListener('click', ()=>{
     document.querySelector('.userName a').innerHTML = ''
 })
 
-
-
+const navListItem = document.querySelectorAll('.nav-menu__link')
+navListItem.forEach(item =>{
+    item.addEventListener('click', event =>{
+        navListItem.forEach(_item =>{
+            _item.classList.remove('actived')
+        })
+        event.target.classList.add("actived")
+    })
+})
 
 export default getInforAccount;
