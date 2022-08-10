@@ -12,12 +12,12 @@ const checkSigned = async()=>{
 }
 const userData = checkSigned()
 
-const initTag = ()=>{
-    const profileTagList = document.querySelectorAll('.menu-item__side-bar')
-    profileTagList.forEach(_item =>{
-        _item.classList.remove('actived')
-    })
-    const tag = window.location.pathname.split('/')[2].split('.')[0]
-    document.querySelector(`#${tag}`).classList.add('actived')
-}
-initTag()
+// const initTag = ()=>{
+//     const profileTagList = document.querySelectorAll('.menu-item__side-bar')
+//     profileTagList.forEach(_item =>{
+//         _item.classList.remove('actived')
+//     })
+//     const tag = window.location.pathname.split('/')[2].split('.')[0]
+//     document.querySelector(`#${tag}`).classList.add('actived')
+// }
+// initTag()
