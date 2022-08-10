@@ -1,1 +1,0 @@
-import http from"./http.js";import getInforAccount from"./header.js";const checkSigned=async()=>{var t=await getInforAccount();if(t)return t;window.location="../page/index.html"},userData=checkSigned();
