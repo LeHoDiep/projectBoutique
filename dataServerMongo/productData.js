@@ -9,7 +9,7 @@ const Objectid = Schema.Objectid;
 const schameProduct = new Schema({
     proName: {type: String, required: true},
     proPrice: {type: Number},
-    proImg: {data: Buffer, contentType: String},
+    proImg: {type: String},
     proDesc:{type: String},
     proType:{type: String}
 })

@@ -16,15 +16,15 @@ html(lang='en')
             .dash-board
                 h1 trang tổng hợp thông tin
                 .form__block
-                  form#add-product__form1(action="/api/file" method="POST" enctype="multipart/form-data")
-                    div.field__form
-                      div.label__form
-                        label(for="file") product image
-                      div.input__form 
-                        input#product-image__add-product1(type="file" name="file")
+                  //- form#add-product__form1(action="/api/file" method="POST" enctype="multipart/form-data")
+                  //-   div.field__form
+                  //-     div.label__form
+                  //-       label(for="file") product image
+                  //-     div.input__form 
+                  //-       input#product-image__add-product1(type="file" name="file")
 
                     input(type="submit" value="thêm product")
-                  form#add-product__form(method="POST" enctype="multipart/form-data")
+                  form#add-product__form(action="/api/addNewProduct" method="POST" enctype="multipart/form-data")
                     div.field__form
 
                       div.label__form
@@ -52,9 +52,9 @@ html(lang='en')
 
                     div.field__form
                       div.label__form
-                        label(for="product-image__add-product") product image
+                        label(for="product-file") product image
                       div.input__form 
-                        input#product-image__add-product(type="file" name="product-image" multiple)
+                        input#product-image__add-product(type="file" name="product-file" multiple)
 
                     input(type="submit" value="thêm product")
                 div.render-datademo

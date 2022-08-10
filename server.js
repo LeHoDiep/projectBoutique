@@ -34,6 +34,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use("/", express.static(path.join(__dirname, "public")));
 app.use(bodyParse.json());
+app.set('views', './src/page'); // Thư mục views nằm cùng cấp với file app.js
+app.set('view engine', 'pug'); // Sử dụng pug làm view engine
 // http://localhost:4000/page/register.html
 // login
 //Routes
@@ -178,6 +180,23 @@ conn.once('open', () => {
       bucketName: "photos"
     } )
 });
+app.post('/api/addNewProduct', upload.single("product-file"), async (req, res) => {
+    const dataForm = {...req.body}
+    try{
+        const newProduct = new tblProduct({ proName: dataForm['product-name'],
+                                             proPrice: dataForm['product-price'], 
+                                             proImg: req.file.filename,
+                                             proDesc: dataForm['product-desc'], 
+                                             proType: dataForm['product-type']});
+        const reponse = await newProduct.save();
+    }catch(error){
+        res.json({status:'error', error: 'lỗi cập nhật sản phẩm'})
+    }
+
+//    res.json({status:'ok', data:req.file.filename})
+    res.render('dashboard');
+})  
+
 app.post('/api/file', upload.single("file"), (req, res) => {
    res.json({status:'ok', data:req.file.filename})
 })  
@@ -202,25 +221,6 @@ app.delete('/api/del_image/:fileId', (req, res) => { //file_id
       if (err) return res.status(404).json({ err: err.message }); 
       res.status(200).send();
     });
-})
-
-app.post('/api/add-new-product', upload.single('product-image'),async(req,res)=>{
-    const dataForm = {...req.body}
-    try{
-        const newProduct = new tblProduct({ proName: dataForm['product-name'],
-                                             proPrice: dataForm['product-price'], 
-                                             proImg: {
-                                                data: req.file.filename,
-                                                contentType: req.file.mimetype
-                                             }, 
-                                             proDesc: dataForm['product-desc'], 
-                                             proType: dataForm['product-type']});
-        const reponse = await newProduct.save();
-        console.log("user created succesfully:" + reponse);
-    }catch(error){
-        res.json({status:'error', error: 'lỗi cập nhật sản phẩm'})
-    }
-    res.json({status: 'ok'})
 })
 
 
