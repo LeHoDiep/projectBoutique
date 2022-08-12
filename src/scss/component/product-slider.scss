@@ -1,0 +1,79 @@
+.product-slider{
+    .container{
+        // border: 1px solid red;
+        margin-top: 5rem;
+        .splide-product{
+            width: 100%;
+            .splide__slide{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .card-carousel{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            // margin: 5rem;
+            // padding: 5rem;
+            border-radius: 10%;
+            .card-block{
+                width: 20.6rem;
+                margin: 1rem;
+                // border: 2px solid blue;
+                padding: 0;
+                border-radius: 5%;
+                box-shadow: 0px 0px 16px 2px #c4957d;
+                .card-block:hover{
+                    box-shadow: 0px 0px 20px 2px #c28f76;
+                    transition: 0.5s;
+                }
+                .card-img{
+                    // border: 2px solid royalblue;
+                    height: 20.2rem;
+                }
+                .card-img img{
+                    height: 100%;
+                    width: 100%;
+                    display: block;
+                    border-radius: 5%;
+                }
+                .card-info{
+                    padding: 00.5rem 0;
+                    background-color: #fafafa;
+                    .card-info p{
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                    }
+                }
+                .card-controller{
+                    display: flex;
+                    border-radius: 5%;
+                    .card-controller-block{
+                        width: 50%;
+                        .btn-card-controller{
+                            display: block;
+                            background-color: #c4957d;
+                            height: 3rem;
+                            justify-content: center;
+                            align-items: center;
+                            text-decoration: none;
+                            color: black;
+                            padding: 0.5rem;
+                            padding-left: 00.5rem;
+                        }
+                    }
+                }
+                
+            }
+        }
+       
+    }
+    
+    
+}
+.content-slider{
+    margin-bottom: 5rem;
+    background-color: #6e4d3c;
+    padding: 1rem;
+}
