@@ -1,7 +1,7 @@
 // kết nối mongodb
 const mongoose = require("mongoose"); //import trước
 //kết nối với server
-const pwdMongoDB = "Ygy2Z08rdJNb1i8x";
+const pwdMongoDB = "CAwbgtSfxbxE5Rbi";
 const nameDBMongoDB = "DB_PiedTeamDemo";
 const multer = require('multer'); //xử lý file middleware
 // lấy đường dẫn liên kết vào
@@ -14,7 +14,7 @@ const conectMongooes = async () => {
         });
         console.log("kết nối server mongodb thành công");
     } catch (error) {
-        console.log("Kết nối server mongodb thất bại");
+        console.log("Kết nối server mongodb thất bại vì ", error);
     }
 };
 conectMongooes();

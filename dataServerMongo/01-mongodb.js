@@ -36,7 +36,8 @@ cài đặt mongoDB bằng npm : npm i mongodb --save (--save để lưu vào pa
 //mongoDB có phân biệt hoa thường nha
 const { MongoClient } = require('mongodb');//destructuring chỉ lấy ra MongoClient
 // có thể viết cùi hơn const MongoClient =  require('mongodb').MongoClient;
-const pwdMongoDB = 'Ygy2Z08rdJNb1i8x'
+// CAwbgtSfxbxE5Rbi
+const pwdMongoDB = 'CAwbgtSfxbxE5Rbi'
 const nameDBMongoDB = 'DB_PiedTeamDemo'
 // lấy đường dẫn liên kết vào
 const url = `mongodb+srv://PiedTeamDemo:${pwdMongoDB}@piedteamdemo.c22y5.mongodb.net/${nameDBMongoDB}?retryWrites=true&w=majority`;
